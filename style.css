@@ -1,0 +1,273 @@
+/*-----------------------------General----------------------------*/
+.text {
+	font-size: 14px;
+	font-weight: lighter;
+}
+/*-----------------------------Backgrounds----------------------------*/
+.bg_header {
+    background: url('images/bg_header.jpg') no-repeat center center;
+    background-position: left top 30%;
+    background-size: cover;
+}
+.bg_newsletter {
+    background: url('images/bg_newsletter.jpg') no-repeat center center;
+    background-position: top left;
+    background-color: rgb(0, 0, 0,0.5); /*Set another bg: color black with 0.4 opacity*/
+    background-blend-mode: multiply; /*now blend both backgrounds (img & color) to have a mix (bg img with black filter)*/
+}
+.bg_about {
+	background-image: url('images/bg_nuage.jpg');
+	background-position: left 47% bottom;
+	background-size: cover;
+}
+.bg_history {
+	background-image: url('images/bg_appareil_photo.jpg');
+	background-position: left 47% bottom;
+	background-size: cover;
+}
+.bg-blue {
+	background-color: rgb(77, 195, 255,0.5); /*add la valeur de l'opacité pour que only the BG and NOT the whole div soit transparent*/
+}
+/*---------------------------Header----------------------------------*/
+/*-------------Menu - Nav---------------*/
+	#menu {
+		background-color: transparent;
+		color: black;
+		border: none;
+		float: right;
+		margin-right: 10px;
+		margin-top: 10px;
+		cursor: pointer;
+		font-size: 300% ;
+		}
+	#containernav {
+		margin-top: 67px;
+	    padding-top: 20px;
+	    padding-bottom: 20px;
+		background-color: black;
+		border: 0.1em solid grey;
+		display: none;
+	}
+	.nav-link{
+		cursor: pointer;
+	}
+	.nav-link:hover {
+		text-decoration: underline;
+	}
+/*-----------------------------------*/
+.logosimplon {
+	width: 250px;
+}
+#HeadTitle2 {
+	line-height: 35px;
+}
+#learnmore{
+	background-color: #2b638f;
+	border: 1px solid #2d6898;
+	text-shadow: 0px 0px 1px #000000;
+}
+
+/*----------------------------SECTION FEATURES--------------------------*/
+.icon {
+	font-size: 55px;
+}
+
+/*---------------------------- SECTION BLOG-----------------------------*/
+.square {
+	width: 200px;
+	margin: auto;
+}
+/*----- SECTION BLOG - 'BUTTON TAKE A LOOK'----*/
+#BorderArrowButton {
+	width: 15px;
+	height:15px;
+	border: 2px solid  white;
+	border-radius: 50%;
+	margin: auto;
+	margin-left: 5px;
+}
+#arrowButton {
+	display: flex;
+	font-size: 12px;
+	margin-left: 1px;
+	margin-top: -3px; /*Only way I found to keep the arrow centeres inside the border, I tried to put it directly in div with border but couldn't center it*/
+}
+/*---------------------------- SECTION HISTORY-----------------------------*/
+#smalltext {
+	font-size: 12px;
+}
+/*---------------------------- SECTION PHOTOS-----------------------------*/
+#photos {
+	background-color: #d8d8d8;
+}
+#masonry {
+	display: none;
+}
+/*--------------------------------- FOOTER--------------------------------*/
+footer {
+	background-color: rgb(28,43,53);
+}
+.socialmedia {
+	font-size: 30px;
+}
+.socialmediablue, a {
+	color: #4682B4;
+}
+
+/*--------------------------------- MEDIA QUERIES--------------------------------*/
+@media (min-width: 767px) {
+/*In HTML: 
+	Margin: Header (divs - Button LearnMore)  
+*/
+
+	.logosimplon {
+		position: relative;
+		width: 350px;
+		margin-left: 15%;
+	}
+	#title {
+		font-size: 60px;
+		padding-top: 200px;
+		text-align: center;
+	}
+
+	#learnmore{
+		box-shadow: 0px 2px 0px #2d6898;
+	}
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 10%;
+		padding-left: 10%;
+	}
+	.square {
+		width: 60%;
+		margin: auto;
+	}
+	.card-img-top {
+	    width: 200px;
+	    display: block;
+	    margin: auto;
+	}
+	#historyFirstP {
+		font-size: 22px;
+	}
+	#photos {
+		text-align: center;
+	}
+	#pics {
+	display: none;
+	}
+	#masonry {
+	display: block;
+	}
+/*----------Masonry photos------*/
+	/* clearfix */
+	.grid:after {
+	  content: '';
+	  display: block;
+	  clear: both;
+	}
+	.grid-item { 
+		float: left;
+		width: 100%;
+	}
+	.grid-sizer {
+	  width: 100%;
+	}
+
+	.grid50 { 
+		width: 50%;
+	}
+	.Size767 {
+		width: 60%; 
+		display: block;
+		margin: auto;
+	}
+}
+/*--------------------------------------*/
+@media (min-width: 990px) {
+/*In HTML: 
+	 Margin: Header (Button LearnMore)
+*/
+	#title {
+		font-size: 60px;
+		padding-top: 250px;
+		margin-left: 10%;
+		margin-right: 10%;
+
+	}
+	.card-img-top {
+	    width: 100%;
+	    display: block;
+	    margin: auto;
+	}
+	#historyFirstP {
+		font-size: 24px;
+	}
+}
+/*--------------------------------------*/
+@media (min-width: 1199px) {
+
+/*In HTML: 
+	Margin:; Header - about - partenaires - Footer.
+	align (row - Col): features - blog - partenaires.
+*/
+	#menu {
+		margin-right: 15%;
+	}
+	#containernav {
+		position: fixed-left;
+	}
+	#title {
+		font-size: 80px;
+		margin-bottom: 4%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.text {
+		font-size: 12px;
+	}
+	.bg_about {
+		background-position: left 47% top 50%;
+	}
+	.ContainerBlue1 {
+		width: 40%;
+		margin-right: 10%;
+	}
+	.ContainerBlue2 {
+		width: 40%;
+		margin-left: 10%;
+	}
+	.Size767 {
+		display: inline-block;
+		width: 	140px;
+		margin: none;
+	}
+	.grid50 { 
+		width: 33.33%;
+	}
+	.grid2 { 
+		width: 66.67%; 
+	}
+	.partner {
+		padding: 0;
+		margin: 0;
+		width: 	140px;
+	}
+	.form-group {
+		width: 60%;
+	}
+	#exampleInputEmail1{
+		width: 50%;
+	}
+	.socialmedia {
+		position: relative;
+		float: right;
+		margin-top: -125px;
+	}
+}
+/*--------------------------------------*/
+@media (min-width: 1920px) {
+
+}
